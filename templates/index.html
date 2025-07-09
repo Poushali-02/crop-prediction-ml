@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crop Prediction</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container py-5">
+        {% if prediction_text %}
+            <div class="alert alert-{{ colour }} mt-4" role="alert">
+                {{ prediction_text }}
+            </div>
+        {% elif error_text %}
+            <div class="alert alert-{{ colour }} mt-4" role="alert">
+                {{ error_text }}
+            </div>
+        {% else %}
+        <div class="card card-welcome mb-4 shadow-sm">
+            <div class="card-body text-center">
+                <h2 class="mb-2">Welcome, Kisan Mitra!</h2>
+                <p class="mb-0">Enter your soil & weather details below, and we'll suggest the best crop for your fields.</p>
+            </div>
+        </div>
+        <div class="card shadow-sm">
+            <div class="card-body">
+                <form method="post" action="/predict">
+                    <div class="row g-3">
+                        <div class="col-md-4">
+                            <label for="nitrogen" class="form-label">Nitrogen (N)</label>
+                            <input type="number" step="0.1" class="form-control" id="nitrogen" name="N" required>
+                        </div>
+                        <div class="col-md-4">
+                            <label for="phosphorous" class="form-label">Phosphorous (P)</label>
+                            <input type="number" step="0.1" class="form-control" id="phosphorous" name="P" required>
+                        </div>
+                        <div class="col-md-4">
+                            <label for="potassium" class="form-label">Potassium (K)</label>
+                            <input type="number" step="0.1" class="form-control" id="potassium" name="K" required>
+                        </div>
+
+                        <div class="col-md-4">
+                            <label for="temperature" class="form-label">Temperature (°C)</label>
+                            <input type="number" step="0.00001" class="form-control" id="temperature" name="temperature" required>
+                        </div>
+                        <div class="col-md-4">
+                            <label for="humidity" class="form-label">Humidity (%)</label>
+                            <input type="number" step="0.0001" class="form-control" id="humidity" name="humidity" required>
+                        </div>
+                        <div class="col-md-4">
+                            <label for="ph" class="form-label">Soil pH</label>
+                            <input type="number" step="0.0001" class="form-control" id="ph" name="ph" required>
+                        </div>
+
+                        <div class="col-md-6">
+                            <label for="rainfall" class="form-label">Rainfall (cm)</label>
+                            <input type="number" step="0.001" class="form-control" id="rainfall" name="rainfall" required>
+                        </div>
+                    </div>
+
+                    <div class="text-center mt-4">
+                        <button type="submit" class="btn btn-predict px-5 py-2">Predict Crop</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+        {% endif %}
+    </div>
+<!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script> -->
+</body>
+</html>
