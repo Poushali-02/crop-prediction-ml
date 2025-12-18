@@ -5,7 +5,7 @@ Web application live at https://whattogrow.onrender.com/
 
 ## 📋 Overview
 
-This project implements an intelligent crop prediction system using machine learning algorithms to recommend the most suitable crops for cultivation based on various soil and climatic parameters. By analyzing factors such as NPK values (Nitrogen, Phosphorus, Potassium), pH levels, temperature, humidity, and rainfall, the system provides personalized crop recommendations to maximize agricultural productivity and profitability [web:22][web:30].
+This project implements an intelligent crop prediction system using machine learning algorithms to recommend the most suitable crops for cultivation based on various soil and climatic parameters. By analyzing factors such as NPK values (Nitrogen, Phosphorus, Potassium), pH levels, temperature, humidity, and rainfall, the system provides personalized crop recommendations to maximize agricultural productivity and profitability.
 
 ## 🎯 Project Objectives
 
