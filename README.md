@@ -1,7 +1,9 @@
 # 🌾 Crop Prediction ML
 
 A machine learning-based crop recommendation system that helps farmers make data-driven decisions about crop selection based on soil properties and environmental conditions.
-Web application live at https://whattogrow.onrender.com/
+
+[![Live Demo](https://img.shields.io/badge/Demo-Live-success)](https://whattogrow.onrender.com/)
+[![Python](https://img.shields.io/badge/Python-3.8+-blue.svg)](https://www.python.org/)
 
 ## 📋 Overview
 
